@@ -11,13 +11,15 @@ function validateForm() {
 
     if (!name.length || !species.length  || !age.length) {
 	alert('Fill all fields pls');
+	return false;
     }
 
     if (isNaN(parseInt(age))) {
 	alert('Enter a number for age');
+	return false;
     }
     
-    return false;
+    return true;
 }
 
 
